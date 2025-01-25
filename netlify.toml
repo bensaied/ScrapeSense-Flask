@@ -1,0 +1,8 @@
+[build]
+  command = "pip install -r requirements.txt && python app.py"
+  base = "/"
+  publish = "."
+
+[build.environment]
+  PYTHON_VERSION = "3.9"  # Replace with your Python version
+  NLTK_DATA = "/opt/buildhome/.nltk_data"  # Optional: For NLTK data
