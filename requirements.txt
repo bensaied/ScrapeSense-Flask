@@ -1,0 +1,13 @@
+flask
+flask-cors
+requests
+pandas
+numpy
+scikit-learn
+gensim
+fasttext
+nltk
+transformers
+torch
+huggingface-hub
+google-api-python-client
