@@ -34,21 +34,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 # Define the port number
 port_number = int(os.environ.get("PORT", 5000))
 
-# Function to terminate any process using the port
-def terminate_port(port):
-    try:
-        # Find the process using the port and terminate it
-        result = os.popen(f"lsof -t -i:{port}").read().strip()
-        if result:
-            os.system(f"kill -9 {result}")
-            print(f"Terminated process on port {port}.")
-        else:
-            print(f"No process found running on port {port}.")
-    except Exception as e:
-        print(f"Error while terminating port {port}: {e}")
-
-# Terminate any process running on the specified port
-terminate_port(port_number)
 
 app = Flask(__name__)
 
